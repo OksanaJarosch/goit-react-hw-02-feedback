@@ -35,10 +35,14 @@ export class App extends Component {
   };
 
   render(){
+    const {good, neutral, bad} = this.state;
+    const total = good + neutral + bad;
+    const positivePercentage = Math.round(good / total * 100);
+
     return (
       <>
-      <Section title="Please leave feedback" stats={this.state} onGood={this.handleGood} onNeutral={this.handleNeutral} onBad={this.handleBad}></Section>
-      <Section title="Statistics" stats={this.state}></Section>
+      <Section title="Please leave feedback" onGood={this.handleGood} onNeutral={this.handleNeutral} onBad={this.handleBad}></Section>
+      <Section title="Statistics" stats={this.state} total={total} positivePercentage={positivePercentage}></Section>
       </>
     );
   };

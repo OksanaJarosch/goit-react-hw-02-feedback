@@ -1,6 +1,6 @@
 
 
-export const FeedbackOptions = ({stats: {good, neutral, bad}, onGood, onNeutral, onBad}) => {
+export const FeedbackOptions = ({onGood, onNeutral, onBad}) => {
     return (
 <div>
 <button onClick={onGood}>Good</button>
