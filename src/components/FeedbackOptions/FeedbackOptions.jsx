@@ -1,11 +1,12 @@
-
+import { ButtonsContainer, Button } from "./FeedbackOptions.styled"
+import { AiFillLike, AiFillDislike } from 'react-icons/ai';
 
 export const FeedbackOptions = ({onGood, onNeutral, onBad}) => {
     return (
-<div>
-<button onClick={onGood}>Good</button>
-<button onClick={onNeutral}>Neutral</button>
-<button onClick={onBad}>Bad</button>
-</div>
+<ButtonsContainer>
+<Button onClick={onGood}><AiFillLike /></Button>
+<Button onClick={onNeutral}>Neutral</Button>
+<Button onClick={onBad}><AiFillDislike /></Button>
+</ButtonsContainer>
     )
 }

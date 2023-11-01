@@ -1,5 +1,6 @@
 import {Component} from "react";
 import {Section} from "./Section/Section"
+import {Container} from "./App.styled"
 
 
 export class App extends Component {
@@ -40,10 +41,10 @@ export class App extends Component {
     const positivePercentage = Math.round(good / total * 100);
 
     return (
-      <>
+      <Container>
       <Section title="Please leave feedback" onGood={this.handleGood} onNeutral={this.handleNeutral} onBad={this.handleBad}></Section>
       <Section title="Statistics" stats={this.state} total={total} positivePercentage={positivePercentage}></Section>
-      </>
+      </Container>
     );
   };
 }
