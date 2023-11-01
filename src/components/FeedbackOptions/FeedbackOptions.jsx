@@ -1,12 +1,12 @@
 import { ButtonsContainer, Button } from "./FeedbackOptions.styled"
-import { AiFillLike, AiFillDislike } from 'react-icons/ai';
 
-export const FeedbackOptions = ({onGood, onNeutral, onBad}) => {
+export const FeedbackOptions = ({onLeaveFeedback, options}) => {
     return (
 <ButtonsContainer>
-<Button onClick={onGood}><AiFillLike /></Button>
-<Button onClick={onNeutral}>Neutral</Button>
-<Button onClick={onBad}><AiFillDislike /></Button>
+{options.map(option => {
+        return (<Button onClick={onLeaveFeedback} key={option}>{option}</Button>)
+    })
+}
 </ButtonsContainer>
     )
 }

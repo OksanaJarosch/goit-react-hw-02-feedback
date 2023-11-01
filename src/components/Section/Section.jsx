@@ -3,11 +3,13 @@ import { Statistics } from "components/Statistics/Statistics"
 import { SectionContainer, Title } from "./Section.styled"
 
 
-export const Section = ({title, stats, onGood, onNeutral, onBad, total, positivePercentage}) => {
+export const Section = ({title, stats, total, positivePercentage, onLeaveFeedback}) => {
     return (
         <SectionContainer>
         <Title>{title}</Title>
-        {title === "Please leave feedback" ? <FeedbackOptions onGood={onGood} onNeutral={onNeutral} onBad={onBad}></FeedbackOptions> : <Statistics stats={stats} total={total} positivePercentage={positivePercentage}></Statistics>}
+        {title === "Please leave feedback" 
+        ? <FeedbackOptions options={["Good", "Neutral", "Bad"]} onLeaveFeedback={onLeaveFeedback}></FeedbackOptions> 
+        : <Statistics stats={stats} total={total} positivePercentage={positivePercentage}></Statistics>}
         </SectionContainer>
     )
 }
