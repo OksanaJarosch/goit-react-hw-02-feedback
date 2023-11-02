@@ -1,4 +1,5 @@
 import {Component} from "react";
+import { GlobalStyle } from "GlobalStyle";
 import {Section} from "./Section/Section"
 import {Container} from "./App.styled"
 
@@ -40,6 +41,7 @@ export class App extends Component {
       <Container>
       <Section title="Please leave feedback" onLeaveFeedback={this.handleFeedback}></Section>
       <Section title="Statistics" stats={this.state} total={total} positivePercentage={positivePercentage}></Section>
+      <GlobalStyle />
       </Container>
     );
   };

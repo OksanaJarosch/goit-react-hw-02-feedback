@@ -17,5 +17,5 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 `;
 
 export const ButtonsContainer = styled.div`
-padding: 8px 0px;
+margin-bottom: 36px;
 `;
